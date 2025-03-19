@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { render, randomRender } from "../features/renderElementSlice";
 
-const GameIcons = ({ color, icon, id, disabled }) => {
+const GameIcons = ({ color, icon, className, id, disabled }) => {
   const dispatch = useDispatch();
 
   const [isClicked, setIsClicked] = useState(false);
@@ -19,7 +19,7 @@ const GameIcons = ({ color, icon, id, disabled }) => {
           color === "blue" ? "border-blue-500" : ""
         } ${color === "yellow" ? "border-yellow-500" : ""} ${
           color === "red" ? "border-red-500" : ""
-        }  flex items-center p-5 w-28 h-28 rounded-full bg-white place-self-center  ${
+        }  flex items-center p-5 w-28 h-28 rounded-full bg-white ${classname}  ${
           disabled ? "cursor-not-allowed" : "cursor-pointer"
         }`}
         onClick={handleClick}
