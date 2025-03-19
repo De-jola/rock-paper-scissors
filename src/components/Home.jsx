@@ -23,7 +23,7 @@ const Home = () => {
           id="2"
           className="place-self-center"
         />
-        <div className="col-span-2 ">
+        <div className="col-span-2 flex justify-center">
           <GameIcons
             color="red"
             icon="/images/icon-rock.svg"
