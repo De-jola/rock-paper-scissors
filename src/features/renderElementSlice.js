@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   value: {
     selectedId: null,
-    randomId: null,
+    randomId: Math.floor(Math.random() * 3) + 1,
     idArray: [1, 2, 3],
     scores: 0,
     gameResult: null,
@@ -51,7 +51,7 @@ export const renderElementSlice = createSlice({
     },
     resetGame: (state) => {
       state.value.selectedId = null;
-      state.value.randomId = null;
+      state.value.randomId = Math.floor(Math.random() * 3) + 1;
       state.value.hasCheckedGame = false;
     },
   },
