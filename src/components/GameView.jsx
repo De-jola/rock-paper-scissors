@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import GameIcons from "./GameIcons";
+import GameIcons from "./gameIcons";
 import Status from "./Status";
 import { checkGame } from "../features/renderElementSlice";
 import PlayAgain from "./PlayAgain";
