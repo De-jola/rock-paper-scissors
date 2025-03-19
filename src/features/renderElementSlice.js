@@ -7,6 +7,7 @@ const initialState = {
     idArray: [1, 2, 3],
     scores: 0,
     gameResult: null,
+    hasCheckedGame: false,
   },
 };
 
@@ -26,6 +27,7 @@ export const renderElementSlice = createSlice({
       }
     },
     checkGame: (state) => {
+      if (state.value.hasCheckedGame) return;
       const { selectedId, randomId } = state.value;
       if (!selectedId || !randomId) return;
 
@@ -45,10 +47,12 @@ export const renderElementSlice = createSlice({
       } else {
         state.value.gameResult = "draw";
       }
+      state.value.hasCheckedGame = true;
     },
     resetGame: (state) => {
       state.value.selectedId = null;
       state.value.randomId = null;
+      state.value.hasCheckedGame = false;
     },
   },
 });

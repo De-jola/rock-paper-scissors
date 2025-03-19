@@ -15,6 +15,9 @@ const GameView = () => {
   const gameResult = useSelector(
     (state) => state.renderElement.value.gameResult
   );
+  const hasCheckedGame = useSelector(
+    (state) => state.renderElement.value.hasCheckedGame
+  );
 
   const gameIconProps = {
     1: { color: "blue", icon: "/images/icon-paper.svg" },
@@ -26,7 +29,7 @@ const GameView = () => {
     if (selectedId && randomId) {
       dispatch(checkGame());
     }
-  }, [selectedId, randomId, dispatch]);
+  }, [selectedId, randomId, hasCheckedGame, dispatch]);
 
   return (
     <div className="flex flex-col gap-10">
