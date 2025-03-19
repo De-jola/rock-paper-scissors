@@ -19,7 +19,7 @@ const GameIcons = ({ color, icon, className, id, disabled }) => {
           color === "blue" ? "border-blue-500" : ""
         } ${color === "yellow" ? "border-yellow-500" : ""} ${
           color === "red" ? "border-red-500" : ""
-        }  flex items-center p-5 w-28 h-28 rounded-full bg-white ${classname}  ${
+        }  flex items-center p-5 w-28 h-28 rounded-full bg-white ${className}  ${
           disabled ? "cursor-not-allowed" : "cursor-pointer"
         }`}
         onClick={handleClick}
