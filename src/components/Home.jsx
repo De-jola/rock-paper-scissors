@@ -1,4 +1,5 @@
-import GameIcons from "./gameIcons";
+import React from "react";
+import GameIcons from "./GameIcons";
 
 const Home = () => {
   return (
